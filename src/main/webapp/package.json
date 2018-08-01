@@ -1,0 +1,28 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "description": "Book Logger App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lirik1992/bookLogger.git"
+  },
+  "author": "Dmitry Likharev",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/Lirik1992/bookLogger/issues"
+  },
+  "homepage": "https://github.com/Lirik1992/bookLogger#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.2.1"
+  }
+}

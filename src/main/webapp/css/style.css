@@ -1,0 +1,289 @@
+body {
+	font-family: 'Lato', sans-serif !important;
+	background: #f4f4f4 !important;
+}
+
+/* AngularJS Ng-Cloak */
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+	display: none !important;
+}
+
+/* Form Inputs style on valid/invalid */
+
+/*.has-error {*/
+	/*color: indianred;*/
+/*}*/
+
+/*form.ng-submitted input.ng-valid {*/
+	/*border: 1px solid #63da53ec;*/
+/*}*/
+/*form.ng-submitted > input.ng-invalid {*/
+	/*border: 1px solid #e25340ce;*/
+/*}*/
+
+/* Pagination */
+.pagination {
+	display: table;
+	margin: 0 auto;
+	padding-bottom: 16px;
+}
+
+/* Table onload spinner */
+.empty-state {
+	height: 400px;
+	background-color: darkgray;
+}
+
+#spinner {
+	top: 45%;
+	position: relative;
+	left: 50%;
+  width: 36px;
+	height: 36px;
+	display: block;
+}
+
+/* Legend */
+fieldset.scheduler-border {
+	border: 1px groove #ddd !important;
+	padding: 0 1.4em 1.4em 1.4em !important;
+	margin: 0 0 1.5em 0 !important;
+	-webkit-box-shadow: 0px 0px 0px 0px #000;
+	box-shadow: 0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+	font-size: 1.2em !important;
+	font-weight: bold !important;
+	text-align: left !important;
+	width: auto;
+	padding: 0 10px;
+	border-bottom: none;
+}
+
+/* Profile dropdown */
+.menu-drop {
+	padding-top: 6px;
+	padding-left: 14px;
+	cursor: pointer;
+}
+
+/* Error labels */
+label[class=has-error] {
+	padding-top: 8px;
+	color: red;
+	font-size: 10px;
+}
+
+/* Side nav + header */
+.side-nav-header {
+	padding-top: 18px;
+}
+
+/* Navbar */
+.navbar {
+	min-height: 33px !important;
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+.navbar-nav > li > a,
+.navbar-brand {
+	padding-top: 6px !important;
+	padding-bottom: 0 !important;
+	height: 33px;
+}
+
+.navbar-default {
+	background-color: #e74c3c;
+	border-color: #c0392b;
+}
+
+.navbar-default .navbar-brand {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #ffbbbc;
+}
+
+.navbar-default .navbar-text {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: #ffbbbc;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: #ffbbbc;
+	background-color: #c0392b;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+	color: #ffbbbc;
+	background-color: #c0392b;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #c0392b;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: #c0392b;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ecf0f1;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: #ecf0f1;
+}
+
+.navbar-default .navbar-link {
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-link:hover {
+	color: #ffbbbc;
+}
+
+/* Collapsed Navigation */
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #ecf0f1;
+	}
+
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #ffbbbc;
+	}
+
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: #ffbbbc;
+		background-color: #c0392b;
+	}
+
+	.navbar-brand {
+		margin-top: 8px;
+	}
+}
+
+/* Custom color*/
+.main-color-bg {
+	background-color: #e74c3c !important;
+	border-color: #c0392b !important;
+	color: #ffffff !important;
+}
+
+/* Header */
+#header {
+	background: #333333;
+	color: #ffffff;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+#header .create {
+	padding-top: 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+	background: #cccccc;
+	color: #333333;
+}
+
+.breadcrumb a {
+	color: #333333;
+}
+
+/* Progress Bars */
+
+.button {
+	display: inline-block;
+}
+
+.btn-record {
+	margin-bottom: 12px;
+}
+
+/* Table Style */
+
+.table > tbody > tr > td {
+	padding-top: 13px;
+}
+
+.table > thead > tr > th {
+	padding: 15px 8px;
+	border-bottom: none;
+}
+
+.table > tbody > tr > td > a {
+	margin-top: 2px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+	margin-bottom: 7px;
+	margin-right: 6px;
+}
+
+.modal-table > tbody > tr > td {
+	padding-top: 16px;
+}
+
+.modal-table > thead:first-child > tr:first-child > th:first-child {
+	padding: 15px 15px;
+}
+
+.modal-table > tbody > tr > td:first-child {
+	padding: 15px 15px;
+	padding-top: 16px;
+}
+
+/* Ui Bootstrap Modal */
+.modal-dialog {
+	margin-top: 116px;
+}
+
+.modal-body {
+	padding: 8px 12px;
+}
+
+.modal-body > form > .row > div {
+    padding-top: 10px;
+}
+
+.modal-header {
+	text-align: center;
+}
+
+.modal-footer {
+    margin-top: 8px;
+}
+
+.modal-search {
+	margin: 15px;
+}
+
+/* Footer */

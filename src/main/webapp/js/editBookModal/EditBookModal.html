@@ -1,0 +1,43 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Edit book</h3>
+</div>
+<div class="modal-body" id="modal-body">
+  <form name="bookForm">
+    <div class="row">
+      <div class="col-md-6">
+        <label for="title">Title</label>
+        <input name="title" id="title" ng-model="vm.book.title" type="text" class="form-control" placeholder="Book title">
+      </div>
+      <div class="col-md-6">
+        <label for="author">Author</label>
+        <input name="author" id="author" ng-model="vm.book.author" type="text" class="form-control" placeholder="Book author">
+      </div>
+      <div class="col-md-6">
+        <label for="publishYear">Publish year</label>
+        <input name="publishYear" id="publishYear" ng-model="vm.book.publishYear" type="number" class="form-control" placeholder="Publish year">
+      </div>
+      <div class="col-md-6">
+        <label for="amount">Amount</label>
+        <input name="amount" id="amount" ng-model="vm.book.count" type="number" class="form-control" placeholder="Amount of books">
+      </div>
+      <div class="col-md-6">
+        <label for="classNumber">For which class</label>
+        <input name="classNumber" id="classNumber" ng-model="vm.book.classNumber" type="number" class="form-control" placeholder="Class number">
+      </div>
+      <div class="col-md-6">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="enable" ng-model="vm.book.enable">Make available</label>
+        </div>
+      </div>
+  </form>
+  </div>
+  <div class="modal-footer">
+    <button ng-disabled="loading" class="btn btn-primary" type="button" ng-click="vm.ok()">
+      Save
+      <spinner show="loading" delay="200"></spinner>
+    </button>
+    <button ng-disabled="loading" class="btn btn-warning" type="button" ng-click="vm.cancel()">
+      Cancel
+    </button>
+  </div>

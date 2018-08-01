@@ -1,0 +1,97 @@
+<div>
+    <h1>Books Management</h1>
+    <section id="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">{{ pageName }}</li>
+        </ol>
+    </section>
+    <form name="searchBook">
+        <div class="row">
+            <div class="col-lg-3 col-lg-offset-9 col-md-3 col-md-offset-9 col-sm-3 col-sm-offset-9 col-xs-3 col-xs-offset-9">
+                <button class="btn btn-default" ng-click="vm.open('md', 'createBook', null)">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    Create new book
+                </button>
+            </div>
+        </div>
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border">Books search engine</legend>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="title">Title</label>
+                    <input name="title" id="title" ng-model="booksSearch.title" type="text" class="form-control" placeholder="Book title">
+                </div>
+                <div class="col-md-3">
+                    <label for="author">Author</label>
+                    <input name="author" id="author" ng-model="booksSearch.author" type="text" class="form-control" placeholder="Book author">
+                </div>
+                <div class="col-md-3">
+                    <label for="publishYear">Publish year</label>
+                    <input name="publishYear" id="publishYear" ng-model="booksSearch.publishYear" type="number" class="form-control" placeholder="Publish year">
+                </div>
+                <div class="col-md-3">
+                    <label for="classNumber">For which class</label>
+                    <input name="classNumber" id="classNumber" ng-model="booksSearch.classNumber" type="number" class="form-control" placeholder="Class number">
+                </div>
+                <div class="col-md-2" style="padding-top: 8px">
+                    <button type="submit" class="btn btn-primary" ng-click="search(searchBook)">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <table ng-show="!loading" class="table table-bordered table-striped">
+
+        <thead>
+            <tr>
+                <td>
+                    Title
+                </td>
+                <td>
+                    Author
+                </td>
+                <td>
+                    Year Published
+                </td>
+                <td>
+                    Amount
+                </td>
+                <td>
+                    Class Number
+                </td>
+                <td>
+                    Available
+                </td>
+                <td>
+                    Actions
+                </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="book in allBooks">
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.publishYear }}</td>
+                <td>{{ book.count }}</td>
+                <td>{{ book.classNumber }}</td>
+                <td>{{ book.enable }}</td>
+                <td>
+                    <a class="btn btn-default" ng-click="vm.open('md', 'editBook', book)">Edit</a>
+                    <a class="btn btn-danger" ng-click="vm.open('md', 'deleteBook', book)">Delete
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div ng-show="loading" class="empty-state" style="margin-bottom: 16px">
+        <i id="spinner" class="fa fa-cog fa-spin"></i>
+    </div>
+
+    <ul uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage" ng-change="pageChanged()"
+        num-pages="numPages"></ul>
+
+    <toaster-container class="toaster main-toaster" toaster-options="{'animation-class': 'toast-top-right', 'limit': 5}"></toaster-container>
+</div>

@@ -1,0 +1,51 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Return book</h3>
+</div>
+<div class="modal-body" id="modal-body">
+  <table ng-show="!vm.loading" class="table table-bordered table-striped">
+
+    <thead>
+      <tr>
+        <td>
+          Title
+        </td>
+        <td>
+          Author
+        </td>
+        <td>
+          Year Published
+        </td>
+        <td>
+          Class Number
+        </td>
+        <td>
+          Action
+        </td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="book in allBooks">
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.publishYear }}</td>
+        <td>{{ book.classNumber }}</td>
+        <td>
+          <a class="btn btn-default" ng-click="vm.returnBook(book.id)">Return</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div ng-show="vm.loading" class="empty-state" style="margin-bottom: 16px">
+    <i id="spinner" class="fa fa-cog fa-spin"></i>
+  </div>
+
+  <ul uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage" ng-change="pageChanged()"
+    num-pages="numPages"></ul>
+</div>
+<div class="modal-footer">
+  <button ng-disabled="loading" class="btn btn-warning" type="button" ng-click="vm.cancel()">
+    Close
+  </button>
+</div>

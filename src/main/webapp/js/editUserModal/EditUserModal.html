@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Edit librarian</h3>
+  </div>
+  <div class="modal-body" id="modal-body">
+    <form name="userForm">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="username">Username</label>
+                <input name="username" id="username" ng-model="vm.user.username" type="text" class="form-control"
+                       placeholder="Librarian username" required>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-feedback" ng-if="!showPassword">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" 
+                    id="password" placeholder="Enter password" 
+                    required 
+                    tabindex="2" 
+                    ng-model="vm.user.password"
+                    autocomplete="current-password"
+                    disabled>
+                </div>
+            </div>
+            <div class="col-md-6">
+              <div class="checkbox">
+                  <label>
+                      <input type="checkbox" value="enable" ng-model="vm.user.promote"
+                      >Promote to admin</label>
+              </div>
+          </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button ng-disabled="loading" class="btn btn-primary" type="submit" ng-click="ok()">
+        Save
+        <spinner show="loading" delay="200"></spinner>
+    </button>
+    <button ng-disabled="loading" class="btn btn-warning" type="button" ng-click="vm.cancel()">
+        Close
+    </button>
+  </div>
