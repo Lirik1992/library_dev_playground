@@ -1,4 +1,4 @@
-### Mera Library Application 
+### Library Application 
 This project is built in order to be a kind of playground for future developers, enjoy.
 
 ### Back End overview
